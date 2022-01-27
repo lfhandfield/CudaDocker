@@ -1,4 +1,4 @@
-FROM nvidia/cuda
+FROM nvidia/cuda:devel
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV R_LIBS_USER=$HOME/R

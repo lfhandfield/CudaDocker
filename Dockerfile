@@ -12,6 +12,8 @@ RUN python3 -m pip install -U numpy; python3 -m pip install -U pandas; python3 -
 RUN python3 -m pip install -U scvi-tools ; python3 -m pip install -U scirpy;  python3 -m pip install -U ipywidgets
 RUN python3 -m pip install -U torch --no-cache-dir 
 RUN python3 -m pip install -U torchvision  --no-cache-dir  ; python3 -m pip install -U pytorch_lightning  --no-cache-dir 
+RUN python3 -m pip install -U scanpy
+
 
 
 CMD ["jupyter notebook --ip=0.0.0.0 --port=5000 --no-browser --allow-root"]

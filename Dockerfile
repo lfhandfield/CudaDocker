@@ -11,6 +11,6 @@ RUN apt-get -y install libarchive-dev python3 python3-pip python3-setuptools pyt
 RUN python3 -m pip install -U numpy; python3 -m pip install -U pandas; python3 -m pip install -U scipy; python3 -m pip install -U scanpy;  python3 -m pip install -U matplotlib ;  python3 -m pip install -U anndata
 RUN python3 -m pip install -U scvi-tools ; python3 -m pip install -U scirpy;  python3 -m pip install -U ipywidgets
 RUN python3 -m pip install -U torch --no-cache-dir 
-RUN python3 -m pip install -U torchvision  --no-cache-dir  ; python3 -m pip install -U pytorch_lightning  --no-cache-dir 
-RUN python3 -m pip install -U scanpy
+RUN python3 -m pip install -U torchvision  --no-cache-dir  ; python3 -m pip install -U pytorch_lightning  --no-cache-dir
+RUN apt-get -y install build-dep python-tables; HDF5_DIR=/usr/lib/x86_64-linux-gnu/hdf5/serial/ && python3 -m pip install tables; python3 -m pip install -U scanpy
 CMD ["jupyter notebook --ip=0.0.0.0 --port=5000 --no-browser --allow-root"]

@@ -12,4 +12,5 @@ RUN pip3 install torch==1.10.2+cu113 torchvision==0.11.3+cu113 torchaudio==0.10.
 RUN python3 -m pip install -U numpy; python3 -m pip install -U pandas; python3 -m pip install -U scipy; python3 -m pip install -U scanpy;  python3 -m pip install -U matplotlib ;  python3 -m pip install -U anndata
 RUN python3 -m pip install -U scvi-tools ; python3 -m pip install -U scirpy;  python3 -m pip install -U ipywidgets
 RUN python3 -m pip install -U pytorch_lightning  --no-cache-dir
+RUN python3 -m pip install -U scanpy
 CMD ["jupyter notebook --ip=0.0.0.0 --port=5000 --no-browser --allow-root"]

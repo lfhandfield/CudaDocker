@@ -11,5 +11,5 @@ RUN apt-get -y install python3 python3-pip python3-setuptools python3-dev
 RUN pip3 install torch==1.10.2+cu113 torchvision==0.11.3+cu113 torchaudio==0.10.2+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
 RUN python3 -m pip install -U numpy; python3 -m pip install -U pandas; python3 -m pip install -U scipy; python3 -m pip install -U scanpy;  python3 -m pip install -U matplotlib ;  python3 -m pip install -U anndata
 RUN python3 -m pip install -U scirpy --no-cache-dir; python3 -m pip install -U ipywidgets --no-cache-dir; python3 -m pip install -U numba==0.53.0 --no-cache-dir
-RUN python3 -m pip install -U pytorch_lightning==1.4.9  --no-cache-dir
+RUN python3 -m pip install -U pytorch_lightning  --no-cache-dir
 CMD ["jupyter notebook --ip=0.0.0.0 --port=5000 --no-browser --allow-root"]

@@ -14,6 +14,6 @@ RUN python3 -c "import numpy; print(numpy.__version__)" > /opt/version_check
 RUN pip3 install numpy pandas scipy scanpy matplotlib anndata scirpy ipywidgets
 RUN python3 -m pip install -U numba==0.53.0 --no-cache-dir
 RUN python3 -c "import numpy; print(numpy.__version__)" > /opt/version_check2
-RUN python3 -m pip install jupyterhub scvi-tools scanpy umap
+RUN python3 -m pip install jupyterhub scvi-tools scanpy umap rpy2
 
 CMD ["jupyter notebook --ip=0.0.0.0 --port=5000 --no-browser --allow-root"]

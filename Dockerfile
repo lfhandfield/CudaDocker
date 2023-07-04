@@ -1,7 +1,13 @@
-FROM nvidia/cuda:12.2.0-devel-ubuntu22.04
-
-RUN sudo apt-get update && apt-get install -y \
-  build-essential vim man xclip libc6-dbg gdb valgrind python3 python3-pip python3-setuptools python3-dev 
+FROM nvidia/cuda:10.0-devel-ubuntu16.04
 
 
-CMD ["jupyter notebook --ip=0.0.0.0 --port=5000 --no-browser --allow-root"]
+RUN apt-get update && \
+  apt-get install -y build-essential && \
+  apt-get install -y software-properties-common vim && \
+  add-apt-repository ppa:jonathonf/python-3.6
+
+RUN apt-get update -y
+RUN apt-get install -y python3.6 python3-pip
+
+COPY requirements.txt /
+RUN pip3 install -r requirements.txt

@@ -1,5 +1,4 @@
-FROM nvidia/cuda:10.0-devel-ubuntu16.04
-
+FROM nvidia/cuda:11.7.1-devel-ubuntu22.04
 RUN apt-get update && \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common vim

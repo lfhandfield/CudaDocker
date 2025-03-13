@@ -6,7 +6,7 @@ RUN apt-get update && \
 RUN apt-get update -y
 RUN apt-get install -y python3.11 python3-pip
 
-RUN pip install -U numba scanpy jupyterlab jupyter-core traitlets anndata scikit-misc leidenalg --upgrade   
+RUN pip install -U numba scanpy jupyterlab jupyter-core traitlets anndata scikit-misc leidenalg --upgrade 
 RUN pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117   
 RUN pip install scvi-tools --upgrade
 
